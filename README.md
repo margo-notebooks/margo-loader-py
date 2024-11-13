@@ -108,24 +108,24 @@ If you want to ignore a lot of cells during import, you can use
 
 
 ```python
-# :: module-stop ::
+# :: stop-module ::
 ```
 
 and
 
 ```python
-# :: module-start :: 
+# :: start-module :: 
 ```
 
 to exclude blocks of cells.
 
-Any cell including and after a cell that contains `module-stop` will be excluded during import until a `module-start` cell is encountered.
+Any cell including and after a cell that contains `stop-module` will be excluded during import until a `start-module` cell is encountered.
 
-Conversely, any cell including and after a cell that contains `module-start` will be excluded during import until a `module-stop` is encountered.
+Conversely, any cell including and after a cell that contains `start-module` will be excluded during import until a `stop-module` is encountered.
 
-Note that you can also use `start` and `stop` instead of `module-start` and `module-stop`. These are aliases.
+Note that you can also use `start` and `stop` instead of `start-module` and `stop-module`. These are aliases.
 
-You can use `module-stop` with no subsequent `module-start`. This will have the effect of ignoring all subsequent cells.
+You can use `stop-module` with no subsequent `start-module`. This will have the effect of ignoring all subsequent cells.
 
 ## Working with percent-formatted notebooks
 
